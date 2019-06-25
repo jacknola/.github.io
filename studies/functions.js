@@ -1,7 +1,7 @@
 /* function help us to execute a block of code 
  we can execute the block of code whenever we need to */
 
-function (par1, par2){/*declaring the function with parameters (placeholders)
+function name(par1, par2){/*declaring the function with parameters (placeholders)
     // body of function: code that will perform action*/
 }
 // parameters can be referred to as inputs
@@ -24,6 +24,9 @@ arguments can be referred to as the outputs of the functions*/
 function nothing(){// parameters are optional within functions
     return undefined // will return undefined as a single value of the function
 }
+function something(){
+    var str1 = "Jack"// return statement is also optional this function
+}
 
 /*Functions can use variables or constants within the global or parent scope
  once a variable is declared inside a function it will only be available within that function (local scope)*/
@@ -43,5 +46,28 @@ function something(){
         var num = 3;
     }
 }
-anotherSomething();
+// anotherSomething();
 console.log(num)// will throw an error since a function cannot access a child scope within another function
+
+//CLOSURES:
+// - functions have access to their own scope
+// - functions have access to other functions variables
+// - they also have access to global scope
+// - scope refers to what you have access to in your code
+
+var global = 3;// global variable
+function something(){
+    var local = 2;// local variable within something function
+    return local // returns local (no closure)// returns 2
+}
+function somethingTwo() {
+    var local = 3// local variable within our function
+    return local + global;// local var concatenated with global variable (closure)// returns 6
+}
+
+const sum1 = function (num1, num2){//this is called an anonymous function
+    return num1 + num2
+}
+//  - anonymous functions are created on the fly
+//  - assigned to a variable and they don't require a name
+//  -basically the same as a named function except for some hoisting rules 

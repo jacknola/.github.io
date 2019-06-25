@@ -6,10 +6,11 @@ var fullName = "Jack Curran"// full name is assigned to Jack Curran with an = op
 //Comparison Operators
 //  - will compare two values which will evaluate to a boolean, true or false
 //      -Binary Comparison Operators
- 1 < 2
+ 1 < 2 // 1 is less than 2
  2 + 2 / 3 > 2
- 1 <= 2
- 1 >= 2
+ 1 <= 2 // 1 is less than or equal to 2
+ 1 >= 2 // 1 is greater than or equal to 2
+ 
  //     - Strict Comparison
  1 === 1 // strictly equal to
  1 !== 2 // strictly not equal to
@@ -17,6 +18,40 @@ var fullName = "Jack Curran"// full name is assigned to Jack Curran with an = op
  
  
 //Arithmetic Operators
+// addition (+)
+var x = 1;// initilization
+var y = 2;// initialization
+console.log(x+y)// will add the variables// prints 3
+
+// subtraction (-)
+var x = 1;// initilization
+var y = 2;// initialization
+console.log(x-y)// will subtract the variables// prints -1
+
+// division (/)
+var x = 4;// initilization
+var y = 2;// initialization
+console.log(x/y)// will divide the variables// prints 2
+
+// multiplication (*)
+var x = 4;// initilization
+var y = 2;// initialization
+console.log(x*y)// will add the variables// prints 8
+
+// remainder (%)
+var x = 5;// initialization
+var y = 2;// initialization
+console.log(x%y)// will print remainder, if there is one, after numbers are divided/ prints 1
+
+// increment (++)
+var x = 5// initialization
+x++// increment (adds 1)
+console.log(x)// prints 6
+
+// decrement (--)
+var x = 6// initialization
+x--// decrements (subtracts 1)
+console.log(x)// prints 5
 
 
 
@@ -43,13 +78,13 @@ console.log(nameFirst + " " + nameLast)// will print Jack Curran instead of Jack
 // Conditional (ternary) Operators
 // -usually used in if-else if-else chain statements
 // -shorthand 
-if(condition){
-  //  if value is true;
+if(x > y){
+  // return true if value is true;
 } else {
-   // if value is false
-}
+   // return false if value is false
+};
 // the conditional operator will shorten this to one line
-condtion ? if value is true : if value is false// ? will seperate the condition from the true statement and anything after the : will run if value isn't true
+var result = x > y ? "x is greater than y": "x is less than y" // ? will seperate the condition from the true statement and anything after the : will run if value isn't true
 
 
 
@@ -75,8 +110,8 @@ condtion ? if value is true : if value is false// ? will seperate the condition 
 !-3// returns false
 
 //The increment operator(++)
-x = 10;
-y = x++// returns y=10 (set to the value before incrementing) and x = 11
+var x = 10;
+var y = x++// returns y=10 (set to the value before incrementing) and x = 11
 
 //Bitwise not operator(~)
 // a bitwise not operator results in -(x + 1)
@@ -94,3 +129,35 @@ typeof 'jack'// returns 'string'
 //  - will decrease  value by 1 of operand
 x = 10;
 y = x--// returns y=10 (set to the value before decrementing) and x = 9
+
+//Assignment Operators
+//  +=
+//  - works on numbers but also strings
+var x = 5
+var y = 5
+var z = x+=y
+console.log(z)// assigns x to y as well as adding them together/ prints 10
+var str1 = "Hello"
+var str2 = " World"
+var str3 = str1 += str2// can use this operator on string/ concatenates the two strings
+console.log(str3)// prints "Hello World"
+
+//  /=
+var x = 10
+var y = 5
+var z = x/=y
+console.log(z)//assigns x to y as well as dividing them/ prints 2
+
+//  -=
+var x = 12
+var y = 6
+var z = x-=y
+console.log(z)// assigns x to y as well as subtracting them/ prints 6
+
+//  *=
+var x = 2
+var y = 2
+var z = x*=y
+console.log(z)// assigns x to y as well as multiplying them/ prints 4
+
+

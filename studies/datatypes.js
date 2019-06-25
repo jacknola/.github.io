@@ -7,6 +7,7 @@
 
 //  a. number - numeric data
       var num =  123// => declaring a variable with a numerical value
+      num = 321// reassinging the variable or copied by value
       
       
 //  b.string - character data
@@ -39,8 +40,14 @@
       var add = function (num1,num2){ // => declaration with parameter (placeholders)
                 return num1 + num2// => body with return statement
             }// => will add num1 + num2
-           console.log(function(1,2))// calling a function with arguments (the number that will be added) -- prints 3 to console
+           console.log(add (1, 2))// calling a function with arguments (the number that will be added) -- prints 3 to console
 // can only call a function after you have declared with a variable
+
+function cool(r){
+     r += 2;
+}
+var s = 3
+console.log(cool(s))// prints 5// copied by reference when s is passed into the function cool();
             
 //  c. object
     // a complex data that is used to store data
@@ -57,17 +64,17 @@
     }
     
     console.log(obj.nameFirst)// prints Jack to the console// this is called dot notation
-    var hairColor = brown
+    var hairColor = "brown";
     
     // NaN
     // - stands for Not a Number
-    typeof NaN => "number";
+    typeof NaN //=> "number";
     
     //undefined
     //will print to console on multiple occassions
-    //if you don't declare a variable the console will print undefined
-    
-    console.log(patient)//=. prints undefined
+    //if you don't initialize a variable the console will print undefined
+    var patient
+    console.log(patient);//=. prints undefined
     
     //null
     //- valid value with no properties

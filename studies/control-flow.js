@@ -9,18 +9,18 @@
 
 // To start a conditional statement you start by using the word "if" with a condition in parentheses
 
-var color = blue;
+var color = "blue";
 
-if(color === red){
+if(color === "red"){
     return true;
 }
 
 // To chain a conditional statement you use the "else-if" statement, allowing developers to create multiple conditions within their conditional statement
 
-if(color === red){
+if(color === "red"){
     return true;
     // will be executed if condition 1 is true
-} else if (color === green){
+} else if (color === "green"){
     return false;
     // will be executed if condition 1 is false and condition 2 is true
 }
@@ -28,9 +28,9 @@ if(color === red){
 // Developers can add a "default" statement within their conditional statement that will only run if all other conditions are false
 // This default statement can be defined with the word "else"
 
-if(color === red){
+if(color === "red"){
     return true;
-} else if (color === green){
+} else if (color === "green"){
     return false;
 } else {
     console.log("It's blue!");
@@ -38,13 +38,15 @@ if(color === red){
 // Will return "It's blue!" to the console since condition 1 and condition 2 are false
 // There is also another conditional statement that you can use called the switch statement
 // It can help your code look neater 
+// the switch statement uses a single expression for multiple choices
+// The code that is executed is decided by the user
 // A switch statement contains:
 //  a. condition within parentheses
 //  b. body made up of curly braces
 //  c. return statement starting with the word "case"
 //  d. break statement that will end each case
 
-var color = blue;
+var color = "blue";
 
 switch(color) {
     case "blue":
@@ -56,6 +58,8 @@ switch(color) {
     case "yellow":
         console.log("The color is yellow.")
     break;
+default:
+console.log("There is no color.")
 }
 // This switch statement will print "The color is blue." to the console since the other statements are false
 // The break statements are necessary to kill each switch block of code for the code to run properly
